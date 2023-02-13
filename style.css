@@ -96,6 +96,20 @@ a {
     transform: rotate(45deg) translate(-5.2px, -4px);
 }
 
+.footer-container {
+    background: #98C9A3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+}
+
+.footer-content {
+    font-size: 1.5rem;
+    color:#303234;
+    font-family: 'Josefin Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 @media screen and (min-width: 768px) {
     .nav-logo-container {
         justify-content: center;
