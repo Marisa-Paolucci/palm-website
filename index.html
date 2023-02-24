@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Palm Plant Shop</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
     <nav id="navbar">
+        <a class="skip-link" href="#main">Skip to main</a>
         <div class="nav-logo-container">
-            <a href="index.html" class="nav-logo"><img src="images/Palm-1.png" alt="Palm Plant Store Logo" height="84" width="90"></a>
+            <a href="index.html" class="nav-logo"><img src="images/Palm-1.png" alt="Palm Plant Shop Logo" height="84" width="90"></a>
             <button id="mobileMenuTrigger" 
                     aria-expanded="false"
                     aria-controls="navigationLinks"
@@ -42,6 +45,52 @@
             </div>
         </div>
     </nav>
+
+    <div class="hero">
+        <div class="container">
+            <h1>Home is where your plants are.</h1>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <main id="main" class="main" tabindex="-1">
+            <h2>Welcome to Palm</h2>
+            <p>
+                Find your perfect plant, take a workshop, or stop by our coffee bar.
+            </p>
+
+            <h2>Plants</h2>
+            <h2>Coffee</h2>
+            <h2>Workshops</h2>
+
+            <h2>Contact us:</h2>
+
+            <form id="contact" action="/contact.php" method="POST" novalidate>
+
+                <section id="errors" aria-live="assertive" tabindex="-1">
+                </section>
+                
+
+                <label for="name">Name (Required):
+                    <span class="error-message">Name cannot be empty</span>
+                </label>
+                <input id="name" type="text" name="name">
+
+                <label for="email">Email (Required):
+                    <span class="error-message">Email cannot be empty</span>
+                </label>
+                <input id="email" type="email" name="email" required>
+
+                <label for="message">Message (Required):
+                    <span class="error-message">Message cannot be empty</span>
+                </label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button>Submit</button>
+
+            </form>
+        </main>
+    </div>
     <div>
         <section class="footer-container">
             <footer class="footer-content">

@@ -12,6 +12,15 @@
 html,
 body {
     overflow-x: hidden;
+    font-family: 'Josefin Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: .12rem;
+    word-spacing: .16rem;
+}
+
+p + p {
+    margin-top: 2rem;
 }
 
 ul {
@@ -21,6 +30,15 @@ ul {
 a {
    text-decoration: none;
    color: #303234; 
+}
+
+.skip-link {
+    left: 100%;
+    position: absolute;
+}
+
+.skip-link:focus {
+    left: 50%;
 }
 
 #navbar {
@@ -94,6 +112,24 @@ a {
 
 .active .line3 {
     transform: rotate(45deg) translate(-5.2px, -4px);
+}
+
+.hero {
+    background-color: #68706a;
+    background-image: url("images/palm-banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 3rem;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-container {
