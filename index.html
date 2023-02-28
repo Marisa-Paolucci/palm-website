@@ -1,108 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="At Palm, we know that home is where your plants are. Visit our shop to see our wide variety of plants, and to taste our delicious coffee">
+        <title>Palm Plant Shop</title>
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Palm Plant Shop</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <body>
+        <header>
+            <nav id="navbar">
+                <a class="skip-link" href="#main">Skip to main</a>
+                <div class="nav-logo-container">
+                    <a href="index.html" class="nav-logo"><img src="images/Palm-1.png" alt="Palm Plant Shop Logo" height="84" width="90"></a>
+                        <button id="mobileMenuTrigger" 
+                                aria-expanded="false"
+                                aria-controls="navigationLinks"
+                                title="Open and Close Navigation">
 
-</head>
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>      
+                        </button>
+                </div>
+            
+                <div id="navigationLinks" class="nav-links-container">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#plants">Plants</a></li>
+                        <li><a href="#coffee">Coffee</a></li>
+                        <li><a href="#workshops">Workshops</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>     
+                </div>
+            </nav>
 
-<body>
-    <nav id="navbar">
-        <a class="skip-link" href="#main">Skip to main</a>
-        <div class="nav-logo-container">
-            <a href="index.html" class="nav-logo"><img src="images/Palm-1.png" alt="Palm Plant Shop Logo" height="84" width="90"></a>
-            <button id="mobileMenuTrigger" 
-                    aria-expanded="false"
-                    aria-controls="navigationLinks"
-                    title="Open and Close Navigation">
+        </header>
 
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>      
-            </button>
-        </div>
-        <div id="navigationLinks" class="nav-links-container">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#plants">Plants</a></li>
-                <li><a href="#workshops">Workshops</a></li>
-                <li><a href="#coffee">Coffee</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>    
-            <div class="nav-socials">
-                <a href="https://facebook.com" title="Visit Facebook Page" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-square-facebook"></i>
-                </a>
-                <a href="https://instagram.com" title="Visit Instagram Page" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-square-instagram"></i>
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <div class="hero">
-        <div class="container">
-            <h1>Home is where your plants are.</h1>
-        </div>
-    </div>
-
-    <div class="wrapper">
         <main id="main" class="main" tabindex="-1">
-            <h2>Welcome to Palm</h2>
-            <p>
-                Find your perfect plant, take a workshop, or stop by our coffee bar.
-            </p>
 
-            <h2>Plants</h2>
-            <h2>Coffee</h2>
-            <h2>Workshops</h2>
+            <section class="hero">
+                <div class="container">
+                    <h1>Home is where your plants are.</h1>
+                </div>
+            </section>
+        
+            <section class="intro">
+                <h2 class="section-title">Welcome to Palm</h2>
+                    <p>
+                        Find your perfect plant, stop by our coffee bar, or take a workshop.
+                    </p>
+            </section>
 
-            <h2>Contact us:</h2>
+            <section class="shopContainer">
+                    <div id="plants" class="item">
+                        <div class="item__content">
+                        <img src="/images/plants3.jpg" alt="plants and planters" />
+                        <h3>Plants</h3>
+                        <p>
+                            We carry a large variety of houseplants and planters. We can help you find the best plant to match your lifestyle and home.
+                        </p>
+                        </div>
+                    </div>
 
-            <form id="contact" action="/contact.php" method="POST" novalidate>
+                    <div id="coffee" class="item">
+                        <div class="item__content">
+                        <img src="/images/coffeebar.jpg" alt="coffee bar" />
+                        <h3>Coffee</h3>
+                        <p>
+                            Our coffee bar serves the best locally roasted micro-batch coffee, tea, and house-made speciality drinks. Pair your coffee with a freshly baked pastry.
+                        </p>
+                        </div>
+                    </div>
 
-                <section id="errors" aria-live="assertive" tabindex="-1">
-                </section>
+                    <div id="workshops" class="item">
+                        <div class="item__content">
+                        <img src="/images/plantclass.jpg" alt="a terrarium building workshop" />
+                        <h3>Workshops</h3>
+                        <p>
+                            We offer various workshops throughout the year, including succulent terrarium workshop and a houseplant 101 workshop. Contact us if you are interested in a workshop.
+                        </p>
+                        </div>
+                    </div>
                 
+            </section>
 
-                <label for="name">Name (Required):
-                    <span class="error-message">Name cannot be empty</span>
-                </label>
-                <input id="name" type="text" name="name">
+            <section class="customer-comments">
+                <h4>Comments from our customers:</h4>
+                <p>"The staff at Palm were so helpful. They helped me find the perfect plant for my friend's new home. Also, the coffee and cream pastry were delicious."</p>
+                <p>-Liana M.</p>
+                <p>"We did the succulent terrarium workshop for my sister's bridal shower. A beautiful space, delicious pastries, and so much fun. Theresa was a great instructor."</p>
+                <p>-Alice B.</p>
+            </section>
 
-                <label for="email">Email (Required):
-                    <span class="error-message">Email cannot be empty</span>
-                </label>
-                <input id="email" type="email" name="email" required>
+            <section class="contact-form">
 
-                <label for="message">Message (Required):
-                    <span class="error-message">Message cannot be empty</span>
-                </label>
-                <textarea id="message" name="message" required></textarea>
+                <h4>Contact us:</h4>
 
-                <button>Submit</button>
+                <form id="contact" action="/contact.php" method="POST" novalidate>
 
-            </form>
-        </main>
-    </div>
-    <div>
-        <section class="footer-container">
-            <footer class="footer-content">
-                <address>
-                    <p>Palm</p>
-                    <p>123 Monstera Ct.</p>
-                    <p>Walton, KY 41094</p>
-                    <p>859-123-4567</p>
-                </address>
+                    <div id="errors" aria-live="assertive" tabindex="-1">
+                    </div>
+                    
+                    <label for="name">Name (Required):
+                        <span class="error-message">Name cannot be empty</span>
+                    </label>
+                    <input id="name" type="text" name="name">
+
+                    <label for="email">Email (Required):
+                        <span class="error-message">Email cannot be empty</span>
+                    </label>
+                    <input id="email" type="email" name="email" required>
+
+                    <label for="message">Message (Required):
+                        <span class="error-message">Message cannot be empty</span>
+                    </label>
+                    <textarea id="message" name="message" required></textarea>
+
+                    <button>Submit</button>
+
+                </form>
+            </section>
+        
+        
+            <footer>
+                <section class="footer-container">
+                <div class="footer-content">
+                        <address>
+                            <p>Palm</p>
+                            <p>123 Monstera Ct.</p>
+                            <p>Walton, KY 41094</p>
+                            <p>859-123-4567</p>
+                        </address>
+                    </div>
+
+                    <div class="footer-socials">
+                        <a href="https://facebook.com" title="Visit Facebook Page" target="_blank" rel="noopener" role="img" aria-labelledby="facebook-title">
+                            <i class="fa-brands fa-square-facebook"></i>
+                            <title id="facebook-title">Follow on Facebook</title>
+                        </a>
+                        <a href="https://instagram.com" title="Visit Instagram Page" target="_blank" rel="noopener" role="img" aria-labelledby="instagram-title">
+                            <i class="fa-brands fa-square-instagram"></i>
+                            <title id="facebook-title">Follow on Instagram</title>
+                        </a>
+                    </div>
+                </section>
             </footer>
-        </section>
-    </div>
-    <script src="script.js"></script:src>
-</body>
+        </main>
+        <script src="script.js"></script:src>
+    </body>
 </html>
