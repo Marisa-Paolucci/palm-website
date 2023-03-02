@@ -6,7 +6,7 @@
 /* Base */
 
 :root {
-    --clr-text: #303234;
+    --clr-text: #121213;
     --clr-primary: #BFD8BD;
     --clr-accent: #f7faf6;
     --clr-form: #cdd8bd;
@@ -48,7 +48,6 @@ a {
 }
 
 img {
-    display: block;
     max-width: 100%;
 }
 
@@ -170,7 +169,7 @@ section {
 
 .intro {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     background-color: var(--clr-accent);
 }
 
@@ -184,52 +183,173 @@ h2 {
     display: flex;
     flex-direction: column;
     padding: 2em 1em;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 h3 {
     font-family: var(--ff-items);
-    font-size: 2em;
+    font-size: 2rem;
     text-align: center;
 }
 
 .item {
-    border-radius: 1em;
     overflow: hidden;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
-}
-
-.item__content {
     padding: 1em;
+    max-width: 30rem;
 }
 
 /*Customer Comments*/
 
+.comments-picture {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background-color: var(--clr-accent);
+}
 
+.comment-title {
+    font-family: var(--ff-items);
+    font-size: 2rem;
+    text-align: center;
+}
+
+.customer-comments {
+    text-align: center;
+}
+
+.comment-name {
+    text-align: right;
+    font-size: 1rem;
+}
+
+.plant-aisle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+
+/*Contact Form*/
+
+.image-contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1em;
+    background-color: var(--clr-form);
+}
+
+.contact-message {
+   margin-bottom: 2em;
+}
+
+.contact-title {
+    font-family: var(--ff-items);
+    font-size: 2rem;
+    text-align: left;
+}
+
+.form__label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+
+.form__text {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin: .25em 0 2em;
+}
+
+.form-group:focus {
+    border-color: #af4242;
+}
+
+.submit-button {
+    all: unset;
+    cursor: pointer;
+    display: inline-block;
+    background: var(--clr-text);
+    color: white;
+    padding: .5em 1.5em;
+    font-weight: 500; 
+}
+
+.submit-button:hover {
+    background: #af4242;
+}
+
+input {
+    border-color: #17201a;
+    border-radius: .5em;
+    margin-bottom: 1em;
+}
+
+input:focus {
+    border-color: #af4242;
+}
+
+textarea {
+    border-color: #17201a;
+    padding: 2em;
+    min-height: 7em;
+}
+
+.error{
+    color: #b13b2c;
+    background-color: #feeff1;
+    padding: .625em;
+    display: none;
+}
+
+.error.display-error {
+    display: block;
+    margin-bottom: 1.25em;
+    transform: translateY(-1.25em);
+}
 
 /* Footer */
 
 .footer-container {
     background-color: var(--clr-primary);
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    padding: 2em;
+    padding: 3em 1em;
 }
 
 .footer-content {
-    font-size: 1.5rem;
-    color:#303234;
-    justify-content: left;
+    font-size: 1.25rem;
+    color: var(--clr-text);
+    text-align: center;
+    font-weight: 600;
 }
 
-.nav-socials {
-    display: flex;
-    justify-content: left;
-    gap: 1.25em;
-    font-size: 1.8rem;
-    padding-bottom: 2.188em;
+.footer-social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-@media screen and (min-width: 768px) {
+.social-link {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.social-icon {
+    max-width: 60px;
+}
+
+@media only screen and (min-width: 875px) {
+    section {
+        padding: 4em 1em;
+    }
+    
     .nav-logo-container {
         justify-content: center;
         padding: 1.563em 0 0;
@@ -253,7 +373,41 @@ h3 {
         border: none;
         padding: 0;
     }
+
+    .shopContainer {
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    .comments-picture {
+        flex-direction: row;
+    }
+
+    .customer-comments {
+        padding: 3em;
+    }
+
+    .plant-aisle {
+        margin: 7em 0 7em 0;
+    }
+
+
+    .contact-form {
+        padding: 4em;
+    }
+
+    .succulents {
+        margin-top: 7em;
+    }
+
+    .image-contact-form {
+        flex-direction: row;
+    }
 }
+
+
 
 @media screen and (min-width: 1025px) {
     #navbar {

@@ -8,7 +8,7 @@
         <meta name="description" content="At Palm, we know that home is where your plants are. Visit our shop to see our wide variety of plants, and to taste our delicious coffee">
         <title>Palm Plant Shop</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
         <link rel="stylesheet" href="style.css">
     </head>
 
@@ -58,30 +58,26 @@
             </section>
 
             <section class="shopContainer">
-                    <div id="plants" class="item">
-                        <div class="item__content">
-                        <img src="/images/plants3.jpg" alt="plants and planters" />
-                        <h3>Plants</h3>
-                        <p>
-                            We carry a large variety of houseplants and planters. We can help you find the best plant to match your lifestyle and home.
-                        </p>
-                        </div>
+                    <div class="item">
+                            <img src="/images/plants3.jpg" alt="plants and planters" />
+                            <h3 id="plants">Plants</h3>
+                            <p>
+                                We carry a large variety of houseplants and planters. We can help you find the best plant to match your lifestyle and home.
+                            </p>
                     </div>
 
-                    <div id="coffee" class="item">
-                        <div class="item__content">
-                        <img src="/images/coffeebar.jpg" alt="coffee bar" />
-                        <h3>Coffee</h3>
-                        <p>
-                            Our coffee bar serves the best locally roasted micro-batch coffee, tea, and house-made speciality drinks. Pair your coffee with a freshly baked pastry.
-                        </p>
-                        </div>
+                    <div class="item">
+                            <img src="/images/coffeebar.jpg" alt="coffee bar" />
+                            <h3 id="coffee">Coffee</h3>
+                            <p>
+                                Our coffee bar serves the best locally roasted micro-batch coffee, tea, and house-made speciality drinks. Pair your coffee with a freshly baked pastry.
+                            </p>
                     </div>
 
-                    <div id="workshops" class="item">
+                    <div class="item">
                         <div class="item__content">
                         <img src="/images/plantclass.jpg" alt="a terrarium building workshop" />
-                        <h3>Workshops</h3>
+                        <h3 id="workshops">Workshops</h3>
                         <p>
                             We offer various workshops throughout the year, including succulent terrarium workshop and a houseplant 101 workshop. Contact us if you are interested in a workshop.
                         </p>
@@ -90,68 +86,81 @@
                 
             </section>
 
-            <section class="customer-comments">
-                <h4>Comments from our customers:</h4>
-                <p>"The staff at Palm were so helpful. They helped me find the perfect plant for my friend's new home. Also, the coffee and cream pastry were delicious."</p>
-                <p>-Liana M.</p>
-                <p>"We did the succulent terrarium workshop for my sister's bridal shower. A beautiful space, delicious pastries, and so much fun. Theresa was a great instructor."</p>
-                <p>-Alice B.</p>
+            <section class="comments-picture">
+                <div class="customer-comments">
+                    <h4 class="comment-title">Comments from our customers:</h4>
+                    <p>"The staff at Palm were so helpful. They helped me find the perfect plant for my friend's new home. Also, the coffee and cream pastry were delicious."</p>
+                    <p class="comment-name">-Liana M.</p>
+                    <p>"We did the succulent terrarium workshop for my sister's bridal shower. A beautiful space, delicious pastries, and so much fun. Theresa was a great instructor."</p>
+                    <p class="comment-name">-Alice B.</p>
+                </div>
+                <div>
+                    <img src="/images/plants2.jpg" class="plant-aisle" alt="woman walking through plant aisle" />
+                </div>
             </section>
 
-            <section class="contact-form">
+            <section class="image-contact-form">
+                <div>
+                    <img src="/images/succulents.jpg" class="succulents" alt="a variety of succulents" />
+                </div>
+                <div class="contact-form">
+                    <h4 id="contact" class="contact-title">Contact us:</h4>
+                    <p class="contact-message">If you have any questions about our services, please fill out the form below.</p>
 
-                <h4>Contact us:</h4>
+                    <form name="contact-us" action="" method="POST" novalidate>
 
-                <form id="contact" action="/contact.php" method="POST" novalidate>
+                        <div id="errors" aria-live="assertive" tabindex="-1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form__label" for="name">Your name (required):</label>
+                            <input class="form__text" id="name" type="text" name="name" required>
+                            <p class="error name-error"></p>
+                        </div>
 
-                    <div id="errors" aria-live="assertive" tabindex="-1">
-                    </div>
-                    
-                    <label for="name">Name (Required):
-                        <span class="error-message">Name cannot be empty</span>
-                    </label>
-                    <input id="name" type="text" name="name">
+                        <div class="form-group">
+                            <label class="form__label" for="email">Your email (required):</label>
+                            <input class="form__text" id="email" type="email" name="email" required>
+                            <p class="error email-error"></p>
+                        </div>
+    
+                        <div class="form-group">
+                            <label class="form__label" for="message">Your message (required):</label>
+                            <textarea class="form__text" id="message" name="message" required></textarea>
+                            <p class="error message-error"></p>
+                        </div>
 
-                    <label for="email">Email (Required):
-                        <span class="error-message">Email cannot be empty</span>
-                    </label>
-                    <input id="email" type="email" name="email" required>
+                        <button class="submit-button">Submit</button>
 
-                    <label for="message">Message (Required):
-                        <span class="error-message">Message cannot be empty</span>
-                    </label>
-                    <textarea id="message" name="message" required></textarea>
-
-                    <button>Submit</button>
-
-                </form>
+                    </form>
+                </div>
             </section>
         
-        
-            <footer>
-                <section class="footer-container">
-                <div class="footer-content">
-                        <address>
-                            <p>Palm</p>
-                            <p>123 Monstera Ct.</p>
-                            <p>Walton, KY 41094</p>
-                            <p>859-123-4567</p>
-                        </address>
-                    </div>
-
-                    <div class="footer-socials">
-                        <a href="https://facebook.com" title="Visit Facebook Page" target="_blank" rel="noopener" role="img" aria-labelledby="facebook-title">
-                            <i class="fa-brands fa-square-facebook"></i>
-                            <title id="facebook-title">Follow on Facebook</title>
-                        </a>
-                        <a href="https://instagram.com" title="Visit Instagram Page" target="_blank" rel="noopener" role="img" aria-labelledby="instagram-title">
-                            <i class="fa-brands fa-square-instagram"></i>
-                            <title id="facebook-title">Follow on Instagram</title>
-                        </a>
-                    </div>
-                </section>
-            </footer>
         </main>
+        <footer>
+            <section class="footer-container">
+            <div class="footer-content">
+                    <address>
+                        Palm<br>
+                        123 Monstera Ct.<br>
+                        Walton, KY 41094<br>
+                        859-123-4567
+                    </address>
+                </div>
+
+                <ul class="footer-social">
+                    <li>
+                        <a class="social-link" href="https://facebook.com" title="Visit Facebook Page" target="_blank" rel="noopener" role="img">
+                            <img class="social-icon" src="images/facebook-logo.png" aria-label="facebook" />
+                        </a>
+                        <a class="social-link" href="https://instagram.com" title="Visit Instagram Page" target="_blank" rel="noopener" role="img">
+                            <img class="social-icon" src="images/instagram-logo.png" aria-label="instagram" />
+                        </a>
+                        <a href="index.html" class="nav-logo"><img src="images/Palm-1.png" alt="Palm Plant Shop Logo" height="84" width="90"></a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
         <script src="script.js"></script:src>
     </body>
 </html>
