@@ -10,6 +10,7 @@
     --clr-primary: #BFD8BD;
     --clr-accent: #f7faf6;
     --clr-form: #cdd8bd;
+    --clr-button: #36453b;
 
     --ff-serif: 'Josefin Sans', sans-serif;
     --ff-items: 'Caveat', sans-serif;
@@ -47,6 +48,14 @@ a {
    text-decoration: none;
 }
 
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: var(--clr-form);
+}
+
 img {
     max-width: 100%;
 }
@@ -59,7 +68,7 @@ section {
 
 #navbar {
     box-shadow: 2px 2px 8px -6px #3c3e50;
-    background-color: var(--clr-primary);
+    background-color: var(--clr-button);
 }
 
 #mobileMenuTrigger {
@@ -71,7 +80,7 @@ section {
 #mobileMenuTrigger div {
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: white;
     margin: 5px;
     border-radius: 5px;
     transition: transform 0.5s ease;
@@ -92,7 +101,7 @@ section {
     display:flex;
     flex-direction: column;
     gap: 1.875em;
-    margin: 1.875em 0 2.5em;
+    margin: 1em 0 2em;
 }
 
 .nav-links li {
@@ -114,7 +123,7 @@ section {
     left: 0;
     height: 0.125rem;
     width: 0;
-    background: #000;
+    background: white;
     transition: width 0.5s ease;
 }
 
@@ -202,6 +211,50 @@ h3 {
     max-width: 30rem;
 }
 
+.item-description {
+    padding-bottom: 1.8em;
+}
+
+.accordion__button {
+    display: block;
+    width: 100%;
+    padding: 0.938em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: var(--clr-button);
+    color: white;
+    font-size: 1rem;
+    font-family: var(--ff-serif);
+    text-align: left;    
+}
+
+.accordion__button::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+.accordion__button--active {
+    background: #496151;
+}
+
+.accordion__button--active::after {
+    content: '\25b4'
+}
+
+.accordion__content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s;
+    padding: 0 .938em;
+    background-color: var(--clr-accent);
+}
+
+.list {
+    list-style: disc;
+}
+
 /*Customer Comments*/
 
 .comments-picture {
@@ -224,8 +277,10 @@ h3 {
 .comment-name {
     text-align: right;
     font-size: 1rem;
+    margin-top: .75rem;
+    margin-bottom: 3rem;
 }
-
+    
 .plant-aisle {
     display: flex;
     justify-content: center;
@@ -273,7 +328,7 @@ h3 {
     all: unset;
     cursor: pointer;
     display: inline-block;
-    background: var(--clr-text);
+    background: var(--clr-button);
     color: white;
     padding: .5em 1.5em;
     font-weight: 500; 
@@ -296,7 +351,7 @@ input:focus {
 textarea {
     border-color: #17201a;
     padding: 2em;
-    min-height: 7em;
+    min-height: 12em;
 }
 
 .error{
@@ -345,9 +400,13 @@ textarea {
     max-width: 60px;
 }
 
+.social-icon:hover {
+    background-color: #af4242;
+}
+
 @media only screen and (min-width: 875px) {
     section {
-        padding: 4em 1em;
+        padding: 2em 1em;
     }
     
     .nav-logo-container {
@@ -393,7 +452,6 @@ textarea {
         margin: 7em 0 7em 0;
     }
 
-
     .contact-form {
         padding: 4em;
     }
@@ -436,7 +494,11 @@ textarea {
         position: relative;
     }
 
-    
-    
+    .customer-comments {
+        padding: 3em;
+        margin: 3em 10em 0 6em;
+        flex: 0 1 50%;
+        font-size: 1.25rem;
 }
 
+}

@@ -14,11 +14,31 @@ mobileMenuTrigger.addEventListener('click', () =>
    }
 });
 
+//Skip Link 
 var skipLink = document.querySelector('.skip-link');
 skipLink.addEventListener('click', function (e) {
    document.querySelector(skipLink.getAttribute('href')).focus();
 });
 
+//Accordion
+document.querySelectorAll('.accordion__button').forEach(button => {
+   button.addEventListener('click', () => {
+      const accordionContent = button.nextElementSibling;
+
+      button.classList.toggle('accordion__button--active');
+
+      if (button.classList.contains('accordion__button--active')) {
+         accordionContent.style.maxHeight = accordionContent.scrollHeight + 'em';
+       } else {
+         accordionContent.style.maxHeight = 0;
+      }
+   });
+
+});
+
+
+
+//Contact Form Error Messages
 function showError(errorElement, errorMessage){
    document.querySelector("."+errorElement).classList.add("display-error");
    document.querySelector("."+errorElement).innerHTML = errorMessage;
