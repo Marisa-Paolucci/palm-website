@@ -64,8 +64,8 @@
                             <p class="item-description">
                                 We carry a large variety of houseplants and planters. We can help you find the best plant to match your lifestyle and home.
                             </p>
-                            <button type="button" class="accordion__button">Our plants</button>
-                            <div class="accordion__content">
+                            <button type="button" class="accordion-button">Our plants</button>
+                            <div class="accordion-content">
                                 <ul class="list">
                                     <li>Fiddle Leaf Fig</li>
                                     <li>Peace Lily</li>
@@ -87,8 +87,8 @@
                             <p>
                                 Our coffee bar serves the best locally roasted micro-batch coffee, tea, and house-made speciality drinks. Pair your coffee with a freshly baked pastry.
                             </p>
-                            <button type="button" class="accordion__button">Coffee Menu</button>
-                            <div class="accordion__content">
+                            <button type="button" class="accordion-button">Coffee Menu</button>
+                            <div class="accordion-content">
                                 <ul class="list">
                                     <li>Brewed Coffee</li>
                                     <li>Americano</li>
@@ -106,20 +106,18 @@
                     </div>
 
                     <div class="item">
-                        <div class="item__content">
                         <img src="./images/plantclass.jpg" alt="a terrarium building workshop" />
                         <h3 id="workshops">Workshops</h3>
                         <p>
                             We offer various workshops throughout the year, including a succulent terrarium workshop and a houseplant 101 workshop. Contact us if you are interested in a workshop.
                         </p>
-                        <button type="button" class="accordion__button">Workshops</button>
-                            <div class="accordion__content">
+                        <button type="button" class="accordion-button">Workshops</button>
+                            <div class="accordion-content">
                                 <ul class="list">
                                     <li>Houseplant 101 Workshop - 3/23/2023 at 11am</li>
                                     <li>Succulent Terrarium Workshop - 4/6/2023 at 11am</li>
                                 </ul>     
                             </div>
-                        </div>
                     </div>
                 
             </section>
@@ -142,9 +140,9 @@
                     <img src="./images/succulents.jpg" class="succulents" alt="a variety of succulents" />
                 </div>
                 <div class="contact-form">
-                    <h4 id="contact" class="contact-title">Contact us:</h4>
+                    <h4 class="contact-title">Contact us:</h4>
                     <p class="contact-message">If you have any questions about our services, please fill out the form below.</p>
-
+                    
                     <form name="contact-us" action="" method="POST" novalidate>
 
                         <div id="errors" aria-live="assertive" tabindex="-1">
@@ -169,6 +167,9 @@
                         </div>
 
                         <button class="submit-button">Submit</button>
+                            <div>
+                                <p id="success"></p>
+                            </div>
 
                     </form>
                 </div>

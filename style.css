@@ -215,7 +215,7 @@ h3 {
     padding-bottom: 1.8em;
 }
 
-.accordion__button {
+.accordion-button {
     display: block;
     width: 100%;
     padding: 0.938em;
@@ -229,21 +229,21 @@ h3 {
     text-align: left;    
 }
 
-.accordion__button::after {
+.accordion-button::after {
     content: '\25be';
     float: right;
     transform: scale(1.5);
 }
 
-.accordion__button--active {
+.accordion-button--active {
     background: #496151;
 }
 
-.accordion__button--active::after {
+.accordion-button--active::after {
     content: '\25b4'
 }
 
-.accordion__content {
+.accordion-content {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.2s;
@@ -365,6 +365,13 @@ textarea {
     display: block;
     margin-bottom: 1.25em;
     transform: translateY(-1.25em);
+}
+
+#success {
+    color: var(--clr-button);
+    background-color: var(--clr-accent);
+    padding: .625em;
+    display: none;
 }
 
 /* Footer */

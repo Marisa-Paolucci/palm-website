@@ -21,13 +21,13 @@ skipLink.addEventListener('click', function (e) {
 });
 
 //Accordion
-document.querySelectorAll('.accordion__button').forEach(button => {
+document.querySelectorAll('.accordion-button').forEach(button => {
    button.addEventListener('click', () => {
       const accordionContent = button.nextElementSibling;
 
-      button.classList.toggle('accordion__button--active');
+      button.classList.toggle('accordion-button--active');
 
-      if (button.classList.contains('accordion__button--active')) {
+      if (button.classList.contains('accordion-button--active')) {
          accordionContent.style.maxHeight = accordionContent.scrollHeight + 'em';
        } else {
          accordionContent.style.maxHeight = 0;
@@ -36,9 +36,8 @@ document.querySelectorAll('.accordion__button').forEach(button => {
 
 });
 
-
-
 //Contact Form Error Messages
+
 function showError(errorElement, errorMessage){
    document.querySelector("."+errorElement).classList.add("display-error");
    document.querySelector("."+errorElement).innerHTML = errorMessage;
@@ -55,7 +54,7 @@ let form = document.forms['contact-us'];
 form.onsubmit = function(event){
 
    clearError();
-
+   
    if(form.name.value === ""){
       showError("name-error", "Please enter your name");
       return false;
@@ -70,7 +69,6 @@ form.onsubmit = function(event){
       showError("message-error", "Please enter a message");
       return false;
    }
-
 
    event.preventDefault();
 }
