@@ -320,10 +320,6 @@ h3 {
     margin: .25em 0 2em;
 }
 
-.form-group:focus {
-    border-color: #af4242;
-}
-
 .submit-button {
     all: unset;
     cursor: pointer;
@@ -344,14 +340,16 @@ input {
     margin-bottom: 1em;
 }
 
-input:focus {
-    border-color: #af4242;
+input,
+textarea:focus-visible {
+    outline-color: #af4242;
 }
 
 textarea {
     border-color: #17201a;
     padding: 2em;
     min-height: 12em;
+    resize: none;
 }
 
 .error{
@@ -365,13 +363,6 @@ textarea {
     display: block;
     margin-bottom: 1.25em;
     transform: translateY(-1.25em);
-}
-
-#success {
-    color: var(--clr-button);
-    background-color: var(--clr-accent);
-    padding: .625em;
-    display: none;
 }
 
 /* Footer */
