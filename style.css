@@ -220,7 +220,7 @@ h3 {
     width: 100%;
     padding: 0.938em;
     border: none;
-    outline: none;
+    /*outline: none;*/
     cursor: pointer;
     background: var(--clr-button);
     color: white;
@@ -241,6 +241,11 @@ h3 {
 
 .accordion-button--active::after {
     content: '\25b4'
+}
+
+.accordion-button:focus-visible {
+    outline-color: #af4242;
+    outline-width: 1rem;
 }
 
 .accordion-content {
@@ -321,17 +326,24 @@ h3 {
 }
 
 .submit-button {
-    all: unset;
     cursor: pointer;
     display: inline-block;
     background: var(--clr-button);
     color: white;
-    padding: .5em 1.5em;
-    font-weight: 500; 
+    padding: 1em 2em;
+    font-family: var(--clr-text);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: .12rem; 
 }
 
 .submit-button:hover {
     background: #af4242;
+}
+
+.submit-button:focus-visible {
+    outline-color: #af4242;
+    outline-width: 2em;
 }
 
 input {
